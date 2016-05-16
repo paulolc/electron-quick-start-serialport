@@ -1,28 +1,32 @@
 # electron-quick-start-serialport
 
-Basic app running Electron with serialport included that installs and runs just by executing:
+Basic app running Electron with serialport included. (tested on Win7x64 using node 6.1.0)
+
+Install and run it:
  
 ```bash
+git clone https://github.com/paulolc/electron-quick-start-serialport
+cd electron-quick-start-serialport
 npm install && npm start
 ``` 
 
-The secret to do this is on the scripts/install component of package.json:
+In order to achieve this, node-pre-gyp needs to be called explicitely with the necessary command line parameters. This is done on the scripts/install option of package.json:
 
 ```bash
 (...)
   "scripts": {
-    "install": "node-pre-gyp install --fallback-to-build --runtime=electron --target=1.1.0 --target_arch=x64 --directory=node_modules/serialport/ --update-binary",
+    "install": "node-pre-gyp install --f(...)",
 (...)
 ``` 
 
-*NOTE:* You still need the VS+python build stuff in order the serialport native module to compile (via node-gyp). 
+*NOTE:* On Windows you'll still need the [VS+python build stuff](https://github.com/voodootikigod/node-serialport#windows) in order the serialport native module to compile (via node-gyp). 
 That is, until the guys at serialport distribute the binary for node-pre-gyp to support Electron 1.1.0 [serialport#812](https://github.com/voodootikigod/node-serialport/issues/812)
 
 ##Roadmap 
 
 Keep this quick-start app in sync with the latest Electron releases.
 
-#Original README:
+##Original readme:
 
 **Clone and run for a quick way to see an Electron in action.**
 

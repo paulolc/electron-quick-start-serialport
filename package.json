@@ -4,7 +4,7 @@
   "description": "A minimal Electron application. Batteries (serialport) included.",
   "main": "main.js",
   "scripts": {
-    "install": "node-pre-gyp install --fallback-to-build --runtime=electron --target=1.1.0 --target_arch=x64 --directory=node_modules/serialport/ --update-binary",
+    "install": "node-pre-gyp install --fallback-to-build --runtime=electron --target=1.1.0 --target_arch=x64 --directory=node_modules/serialport/ --update-binary --dist-url=https://atom.io/download/atom-shell",
      "start": "electron main.js"
   },
   "repository": {
@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/electron/electron-quick-start-serialport#readme",
   "devDependencies": {
-    "electron-prebuilt": "^1.0.1",
+    "electron-prebuilt": "^1.1.0",
     "node-gyp": "^3.3.1",
     "node-pre-gyp": "^0.6.28"
   },
