@@ -1,4 +1,4 @@
-# electron-quick-start
+# electron-quick-start-serialport
 
 Basic app running Electron with serialport included that installs and runs just by executing:
  
@@ -15,13 +15,14 @@ The secret to do this is on the scripts/install component of package.json:
 (...)
 ``` 
 
-You still need the VS+python build stuff in order the serialport native module to compile (via node-gyp). 
+*NOTE:* You still need the VS+python build stuff in order the serialport native module to compile (via node-gyp). 
 That is, until the guys at serialport distribute the binary for node-pre-gyp to support Electron 1.1.0 [serialport#812](https://github.com/voodootikigod/node-serialport/issues/812)
 
-ROADMAP: Keep this quick-start app in sync with the latest Electron releases.
+##Roadmap 
 
+Keep this quick-start app in sync with the latest Electron releases.
 
-Original README:
+#Original README:
 
 **Clone and run for a quick way to see an Electron in action.**
 
@@ -37,7 +38,7 @@ A basic Electron application needs just these files:
 
 You can learn more about each of these components within the [Quick Start Guide](http://electron.atom.io/docs/latest/tutorial/quick-start).
 
-## To Use
+### To Use
 
 To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 

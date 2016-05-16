@@ -1,28 +1,37 @@
 {
-  "name": "electron-quick-start",
+  "name": "electron-quick-start-serialport",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "A minimal Electron application. Batteries (serialport) included.",
   "main": "main.js",
   "scripts": {
-    "start": "electron main.js"
+    "install": "node-pre-gyp install --fallback-to-build --runtime=electron --target=1.1.0 --target_arch=x64 --directory=node_modules/serialport/ --update-binary",
+     "start": "electron main.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/electron/electron-quick-start.git"
+    "url": "git+https://github.com/electron/electron-quick-start-serialport.git"
   },
   "keywords": [
     "Electron",
     "quick",
     "start",
-    "tutorial"
+    "tutorial",
+    "serialport"
   ],
   "author": "GitHub",
   "license": "CC0-1.0",
   "bugs": {
-    "url": "https://github.com/electron/electron-quick-start/issues"
+    "url": "https://github.com/electron/electron-quick-start-serialport/issues"
   },
-  "homepage": "https://github.com/electron/electron-quick-start#readme",
+  "homepage": "https://github.com/electron/electron-quick-start-serialport#readme",
   "devDependencies": {
-    "electron-prebuilt": "^1.0.1"
-  }
+    "electron-prebuilt": "^1.0.1",
+    "node-gyp": "^3.3.1",
+    "node-pre-gyp": "^0.6.28"
+  },
+  "dependencies": {
+      "serialport": "^3.1.2"
+  },
+  "engine": "^6.1.0"
+  
 }
